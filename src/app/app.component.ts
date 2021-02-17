@@ -15,6 +15,12 @@ export class AppComponent {
     year: 2000,
   };
 
+  miles: number;
+
+  onMilesChange(value: string): void {
+    this.miles = parseFloat(value);
+  }
+
   onAmountChange(amount: string): void{
     this.amount = parseFloat(amount);
   }

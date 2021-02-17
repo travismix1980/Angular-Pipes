@@ -33,6 +33,19 @@
       <div>{{ amount | currency: 'USD': 'symbol': '1.2-2' }}</div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Miles:</label>&nbsp;
+      <input type="number" class="form-control" (input)="onMilesChange($event.target.value)" />
+    </div>
+    <div class="col">
+      <label><b>Kilometers</b></label>
+      <div>{{ miles | convert: 'k' }}</div>
+    </div>
+  </div>
+
 </div>
 
-{{ car | json}}
+
+<!-- for dev debug purposes remove for production {{ car | json}} -->
